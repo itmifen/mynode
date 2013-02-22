@@ -1,8 +1,12 @@
-var connection = new WebSocket('ws://localhost:3000');
+$(function () {
+
+
+})
+
 
 function regchatname()
-    {
-           var username=$("#username").val();
+{
+    var username=$("#username").val();
     $("#usernamecontent").css("display","none");
     $("#logok").html("当前登录的用户名为:"+username+"<br/><br/>");
     $("#msgdiv").css("display","block");
@@ -11,22 +15,19 @@ function regchatname()
 
 function sendmsg()
 {
+    var connection = new WebSocket('ws://localhost:3001');
+    alert(connection.readyState);
+    connection.onopen = function (event) {
+        alert("打开连接");
+    };
+
     var detail=$("#msgdetail").val();
-    if(msg)
+    if(detail)
     {
-        connection.send(msg);
+        connection.send(detail);
     }
-
+    else
+    {
+        alert('error');
+    }
 }
-
-input.keydown(function(e) {
-    if (e.keyCode === 13) {
-        var msg = $(this).val();
-        if (!msg)    return;
-        connection.send(msg);
-        $(this).val('');
-        if (myName === false) {
-            myName = msg;
-        }
-    }
-});

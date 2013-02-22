@@ -23,7 +23,7 @@
       <file leaf-file-name="browser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/public/javascripts/browser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="33" selection-start="935" selection-end="956" vertical-scroll-proportion="0.0">
+            <state line="39" column="5" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1358339908000" expanded="false" signature="1180:1186" placeholder="..." />
               </folding>
@@ -31,10 +31,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="21" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/Js/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="29" selection-start="389" selection-end="389" vertical-scroll-proportion="0.78756475">
+            <state line="18" column="33" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.29533678">
               <folding />
             </state>
           </provider>
@@ -43,7 +61,7 @@
       <file leaf-file-name="chat.ejs" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/chat.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="48" selection-start="560" selection-end="569" vertical-scroll-proportion="0.0">
+            <state line="14" column="14" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -313,10 +331,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.4972156" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17104216" sideWeight="0.21824104" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17104216" sideWeight="0.6710098" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39739415" sideWeight="0.4781225" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39739415" sideWeight="0.47494033" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5417661" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.45266506" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5449483" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.4494829" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -378,15 +396,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/node_modules/connect/lib/proto.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="205" column="0" selection-start="5242" selection-end="5242" vertical-scroll-proportion="0.0" />
@@ -448,32 +461,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="475" selection-end="475" vertical-scroll-proportion="0.049222797">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/chat.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="560" selection-end="569" vertical-scroll-proportion="0.0">
+        <state line="14" column="14" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/public/javascripts/browser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="33" selection-start="935" selection-end="956" vertical-scroll-proportion="0.0">
+        <state line="39" column="5" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1358339908000" expanded="false" signature="1180:1186" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/Js/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="29" selection-start="389" selection-end="389" vertical-scroll-proportion="0.78756475">
+        <state line="18" column="33" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.29533678">
           <folding />
         </state>
       </provider>

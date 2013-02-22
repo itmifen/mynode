@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title><%=title%></title>
+         <% include css.ejs %>
+    </head>
+    <body>
+        <% include top.ejs %>
+        this is my first chat!!<br/>
+         <div id="usernamecontent">用户名： <input id="username" name="username" id="username" />
+                <input type="submit" name="regname" id="regname" onclick="regchatname();" >
+                </div>
+        <div id="logok">
+        </div>
+        <div id="msgdiv" class="disno">
+        <textarea id="username" name="username" class="msg"></textarea>
+        <input type="submit" value="发送" name="regname" id="regname" onclick="sendmsg();"  ></div><br/>
+        <div id="msglist"></div>
+    </body>
+</html>

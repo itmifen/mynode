@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title><%=title%></title>
+ <% include css.ejs %>
+    </head>
+    <body><% include top.ejs %>
+        this is my List!!<br/>
+            <div>这里涉及到的有数据库操作、ejs数据绑定</div>
+       <ul>
+        <% for(var i=0; i<users.length; i++) { %>
+       <li class="w220 fleft red">帐号：<%=users[i].username%></li>  <li>密码：<%=users[i].password%></li>
+       <%}%>
+       </ul>
+    </body>
+</html>

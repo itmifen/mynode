@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>reg</title>
+         <% include css.ejs %>
+    </head>
+    <body><% include top.ejs %>
+    <div>这里涉及到的有post传值、数据库操作</div>
+        <form action="doreg" method="post">
+       用户名： <input id="username" name="username" /><%=tip%><br/>
+        密码： <input id="password" name="password" /><br/>
+      <input type="submit" value="注册" />
+            <%=regtip%>
+            </form>
+    </body>
+</html>

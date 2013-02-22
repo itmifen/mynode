@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title><%=title%></title>
+         <% include css.ejs %>
+    </head>
+    <body><% include top.ejs %>
+        this is my first upload!!<br/>
+            <div>文件上传，文件的操作</div>
+         <form action="/doupload" method="post" enctype="multipart/form-data">
+             <input type="file" name="upload" id="upload"  />
+              <input type="submit" value="上传" />
+           </form>
+    </body>
+</html>

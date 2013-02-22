@@ -20,19 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/app.js">
+      <file leaf-file-name="browser.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/public/javascripts/browser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="21" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="26" column="33" selection-start="935" selection-end="956" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1358339908000" expanded="false" signature="1180:1186" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/views/chat.html">
+      <file leaf-file-name="chat.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/Js/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="15" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+            <state line="16" column="29" selection-start="389" selection-end="389" vertical-scroll-proportion="0.78756475">
               <folding />
             </state>
           </provider>
@@ -41,37 +43,8 @@
       <file leaf-file-name="chat.ejs" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/chat.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
+            <state line="16" column="48" selection-start="560" selection-end="569" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reg.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/reg.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="51" selection-start="270" selection-end="310" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/index.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="0" selection-end="293" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="browser.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/public/javascripts/browser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="23" selection-start="157" selection-end="157" vertical-scroll-proportion="0.24611399">
-              <folding>
-                <marker date="1358339908000" expanded="false" signature="1180:1186" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -95,6 +68,7 @@
         <option value="$PROJECT_DIR$/public/Css/style.css" />
         <option value="$PROJECT_DIR$/Views/top.ejs" />
         <option value="$PROJECT_DIR$/Views/chat.ejs" />
+        <option value="$PROJECT_DIR$/public/Js/chat.js" />
       </list>
     </option>
   </component>
@@ -158,7 +132,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,7 +306,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="1" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -376,11 +382,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.WebIde50/system/extLibs/nodejs-v0.8.18-src/core-modules-sources/lib/path.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="430" column="0" selection-start="12427" selection-end="12427" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0" />
@@ -428,45 +429,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="0" selection-end="293" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="0" selection-end="293" vertical-scroll-proportion="0.098445594">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/reg.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="51" selection-start="270" selection-end="310" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/chat.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+        <state line="12" column="51" selection-start="270" selection-end="310" vertical-scroll-proportion="0.40932643">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/views/chat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="15" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+        <state line="7" column="15" selection-start="188" selection-end="188" vertical-scroll-proportion="0.053072624">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="475" selection-end="475" vertical-scroll-proportion="0.049222797">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/chat.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="48" selection-start="560" selection-end="569" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/public/javascripts/browser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="23" selection-start="157" selection-end="157" vertical-scroll-proportion="0.24611399">
+        <state line="26" column="33" selection-start="935" selection-end="956" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1358339908000" expanded="false" signature="1180:1186" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="29" selection-start="389" selection-end="389" vertical-scroll-proportion="0.78756475">
+          <folding />
         </state>
       </provider>
     </entry>

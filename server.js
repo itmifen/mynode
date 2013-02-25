@@ -9,7 +9,7 @@ var app = express();
 var http=require('http');
 var server=http.createServer(app);
 var WebSocketServer=require('ws').Server;
-var wss=new WebSocketServer({server:server});
+var wss=new WebSocketServer({server:server,port: 3001});
 var clients=[];
 var colors = [ 'red', 'green', 'blue', 'magenta', 'purple', 'plum', 'orange' ];
 wss.on('connection',function(ws){
@@ -17,6 +17,7 @@ wss.on('connection',function(ws){
     var username=false;
     var usercolor=false;
     ws.on('message',function(msg){
+        console.log("aaa");
         if(!username)
         {
             username=msg;
@@ -37,8 +38,10 @@ wss.on('connection',function(ws){
             }
         }
 
-    })
-
+    });
+    ws.on('error', function() {
+        console.log(Array.prototype.join.call(arguments, ", "));
+    });
     ws.on('close', function(ws){
         if(userName !== false && userColor != false){
             var index = clients.indexOf(ws);
@@ -47,7 +50,10 @@ wss.on('connection',function(ws){
         }
     });
 
+
 })
+
+
 
 
 

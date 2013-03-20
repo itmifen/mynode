@@ -1,21 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title><%=title%></title>
-         <% include css.ejs %>
-    </head>
-    <body>
-        <% include top.ejs %>
-        this is my first chat!!<br/>
-         <div id="usernamecontent">用户名： <input id="username" name="username" id="username" />
-                <input type="submit" name="regname" id="regname" onclick="regchatname();" >
-                </div>
-        <div id="logok">
-        </div>
-        <div id="msgdiv" class="disno">
-        <textarea id="msgdetail" name="msgdetail" class="msg"></textarea>
-        <input type="submit" value="发送" name="regname" id="regname" onclick="sendmsg();"  ></div><br/>
-        <div id="msglist"></div>
-    </body>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        $(function(){
+           // var iosocket = io.connect("http://localhost:3001");
+          var iosocket = io.connect(null);
+            iosocket.on('connect', function () {
+
+                $('#incomingChatMessages').append($('<li>已经建立连接</li>'));
+
+                iosocket.on('message', function(message) {
+                    $('#incomingChatMessages').append($('<li></li>').text(message));
+                });
+
+                iosocket.on('disconnect', function() {
+                    $('#incomingChatMessages').append('<li>断开连接了</li>');
+                });
+            });
+
+            $('#outgoingChatMessage').keypress(function(event) {
+                if(event.which == 13) {
+                    event.preventDefault();
+                    iosocket.emit("message",$('#outgoingChatMessage').val());
+                   // iosocket.send($('#outgoingChatMessage').val());
+                    $('#outgoingChatMessage').val('');
+                }
+            });
+        });
+    </script>
+    <title><%=title%></title>
+</head>
+<body>
+Incoming Chat:&nbsp;<ul id="incomingChatMessages"></ul>
+<br />
+<input type="text" id="outgoingChatMessage">
+</body>
 </html>

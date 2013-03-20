@@ -1,57 +1,39 @@
 var express = require('express'),
     routes = require('./routes'),
+    http = require('http'),
     config = require('./config').config,
     db=require('./common/db');
 var sql = db.sql;
 
 var app = express();
-
-var http=require('http');
-var server=http.createServer(app);
-var WebSocketServer=require('ws').Server;
-var wss=new WebSocketServer({server:server,port: 3001});
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
 var clients=[];
-var colors = [ 'red', 'green', 'blue', 'magenta', 'purple', 'plum', 'orange' ];
-wss.on('connection',function(ws){
-    clients.push(ws);
-    var username=false;
-    var usercolor=false;
-    ws.on('message',function(msg){
-        console.log("aaa");
-        if(!username)
+
+server.listen(process.env.port || config.main_port);
+
+io.sockets.on('connection', function (client){
+
+   // client.send ( '已经建立连接!' );
+    clients.push(client);
+
+    client.on('online',function(data){
+       console.log(data);
+    })
+
+    client.on('message', function (msg) {
+        console.log(msg);
+        for(var index in clients)
         {
-            username=msg;
-            usercolor=colors.shift();
-            ws.send(JSON.stringify({ type:'color', data: userColor }));
-            console.log(userName + ' login');
-        }else{
-            console.log(userName + ' say: ' + msg);
-            var obj = {
-                time: (new Date()).getTime(),
-                text: msg,
-                author: userName,
-                color: userColor
-            };
-            var json = JSON.stringify({type:'message', data: obj});
-            for (var i=0; i < clients.length; i++) {
-                clients[i].send(json);
-            }
+            clients[index].emit('message',msg);
         }
+      //   client.broadcast.emit('message', msg);
+    }) ;
 
-    });
-    ws.on('error', function() {
-        console.log(Array.prototype.join.call(arguments, ", "));
-    });
-    ws.on('close', function(ws){
-        if(userName !== false && userColor != false){
-            var index = clients.indexOf(ws);
-            clients.splice(index, 1);
-            colors.push(userColor);
-        }
+    client.on('disconnect', function () {
     });
 
-
-})
+});
 
 
 
@@ -80,5 +62,5 @@ app.post('/doupload', routes.doupload);
 app.get('/chat', routes.chat);
 
 
-app.listen(process.env.port || config.main_port);
+//app.listen(process.env.port || config.main_port);
 console.log("Express server listening");

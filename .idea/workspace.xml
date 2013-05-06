@@ -20,46 +20,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="38" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="joycookie.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/joycookie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="1" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5386598">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/db.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="8" selection-end="41" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/chat.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="64" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../chat-websockt-master/chat-websockt-master/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="41" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0">
+            <state line="11" column="1" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5103093">
               <folding />
             </state>
           </provider>
@@ -122,6 +86,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,14 +167,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="F:/项目/Demo/mynode" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="F:/项目/Demo/mynode" />
   </component>
   <component name="RunManager" selected="Node.js.nodejs">
     <configuration default="false" name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/routes" coffeescript-run="false">
@@ -240,6 +204,9 @@
       <setting name="jsFile" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$" coffeescript-run="false">
+      <method />
+    </configuration>
     <configuration default="true" type="XSLT" factoryName="XSLT">
       <option name="myOutputFile" />
       <option name="myOpenOutputFile" value="false" />
@@ -254,9 +221,6 @@
       <OutputType value="CONSOLE" save-to-file="false" />
       <FileType name="XML" />
       <JdkChoice value="FROM_MODULE" />
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$" coffeescript-run="false">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
@@ -489,21 +453,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="38" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+        <state line="19" column="38" selection-start="508" selection-end="508" vertical-scroll-proportion="0.04896907">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="8" selection-end="41" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="8" selection-end="41" vertical-scroll-proportion="0.04896907">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/joycookie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5386598">
+        <state line="11" column="1" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5103093">
           <folding />
         </state>
       </provider>

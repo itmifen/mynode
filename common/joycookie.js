@@ -11,7 +11,9 @@ exports.setcookie=function(objName,objValue,objHours)
     document.cookie = str;
 }
 
-exports.getcookie=funtion(objName)
+exports.getcookie=function(objName)
 {
-    
+    var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+    if(arr != null) return unescape(arr[2]);
+    return null;
 }

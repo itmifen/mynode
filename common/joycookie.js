@@ -10,3 +10,8 @@ exports.setcookie=function(objName,objValue,objHours)
     }
     document.cookie = str;
 }
+
+exports.getcookie=funtion(objName)
+{
+    
+}

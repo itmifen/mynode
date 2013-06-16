@@ -6,3 +6,4 @@
 .menu div{ width: 100px;float: left; }
 .msg{ width: 200px; height: 50px;}
 .disno{ display: none;}
+.disblock{ display:block;}

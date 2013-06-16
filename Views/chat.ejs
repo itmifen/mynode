@@ -1,39 +1,85 @@
 <html>
 <head>
+<title><%=title%></title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         $(function(){
-           // var iosocket = io.connect("http://localhost:3001");
-          var iosocket = io.connect(null);
-            iosocket.on('connect', function () {
+                  // var iosocket = io.connect("http://localhost:3001");
+                    var iosocket = io.connect(null);
+                    var from = $.cookie('username');
+                     iosocket.emit('online',JSON.stringify({user:from}));
 
-                $('#incomingChatMessages').append($('<li>已经建立连接</li>'));
+                      iosocket.on('connect', function () {
 
-                iosocket.on('message', function(message) {
-                    $('#incomingChatMessages').append($('<li></li>').text(message));
-                });
+                          $('#incomingChatMessages').append($('<li>已经建立连接</li>'));
+                           iosocket.on('userflush',function(data){
+                                                        var data = JSON.parse(data);
+                                                        var users = data.users;
+                                                        flushUsers(users);
+                                                    });
 
-                iosocket.on('disconnect', function() {
-                    $('#incomingChatMessages').append('<li>断开连接了</li>');
-                });
-            });
+
+                          iosocket.on('message', function(message) {
+                          var data=JSON.parse(message);
+                              $('#incomingChatMessages').append($('<li></li>').text(data.user+":"+data.msg));
+                          });
+
+                          iosocket.on('disconnect', function() {
+                              $('#incomingChatMessages').append('<li>断开连接了</li>');
+                          });
+                      });
 
             $('#outgoingChatMessage').keypress(function(event) {
                 if(event.which == 13) {
                     event.preventDefault();
-                    iosocket.emit("message",$('#outgoingChatMessage').val());
+                    var user=$.cookie("username");
+                    var msg=JSON.stringify({user:user,msg:$('#outgoingChatMessage').val()});
+                    iosocket.emit("message",msg);
                    // iosocket.send($('#outgoingChatMessage').val());
                     $('#outgoingChatMessage').val('');
                 }
             });
         });
+
+        function logout()
+        {
+          $.cookie("username","");
+          window.location.href="/reg";
+        }
+
+
+        function flushUsers(users)
+        	{
+        		var ulEle = $("#list");
+        		ulEle.empty();
+        		ulEle.append('<li title="双击聊天" alt="all" onselectstart="return false">所有人</li>');
+        		for(var i = 0; i < users.length; i ++)
+        		{
+        			ulEle.append('<li alt="'+users[i]+'" title="双击聊天" onselectstart="return false">'+users[i]+'</li>')
+        		}
+        	}
     </script>
-    <title><%=title%></title>
+
+      <% include css.ejs %>
 </head>
 <body>
-Incoming Chat:&nbsp;<ul id="incomingChatMessages"></ul>
+<% include top.ejs %>
+<%=username%>进入聊天室进行聊天  <input type="submit" value="退出" onclick="logout()" />
+<br/>
+
+
+&nbsp;<ul id="incomingChatMessages"></ul>
 <br />
+<select>
+  <option value ="0">所有人</option>
+  <option value ="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
 <input type="text" id="outgoingChatMessage">
+<br/><br/><br/><br/>
+在线用户列表：<br/>
+<ul id="list"></ul>
 </body>
 </html>

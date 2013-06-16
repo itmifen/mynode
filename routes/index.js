@@ -1,6 +1,8 @@
 var db = require('../common/db');
+var cookie = require('../common/cookie');
 var fs = require('fs');
 var sql = db.sql;
+
 
 exports.index = function (req, res) {
     res.render('index', {
@@ -61,6 +63,8 @@ exports.doreg = function (req, res) {
                             regtiptxt = "注册成功";
                         }
                     }
+                    res.cookie('username',username);
+
                     res.render('reg', {
                         title: '注册', tip: usernametip, regtip: regtiptxt
                     });
@@ -124,7 +128,15 @@ exports.doupload = function (req, res) {
 
 
 exports.chat = function (req, res) {
-    res.render('chat', {
-        title: 'chat'
-    });
+    var username=cookie.getcookielist(req, res).username;
+    if((username=="")||(username==undefined))
+    {
+        res.redirect('/reg');
+    }
+    else
+    {
+        res.render('chat', {
+            title: 'chat',username:cookie.getcookielist(req, res).username
+        });
+    }
 }

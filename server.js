@@ -9,20 +9,37 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var clients=[];
+var users = [];
 
 server.listen(process.env.port || config.main_port);
 
 io.sockets.on('connection', function (client){
-
-   // client.send ( '已经建立连接!' );
     clients.push(client);
 
     client.on('online',function(data){
-       console.log(data);
-    })
+        var data = JSON.parse(data);
+        console.log(data);
+        //检查是否是已经登录绑定
+        if(!clients[data.user])
+        {
+            //新上线用户，需要发送用户上线提醒,需要向客户端发送新的用户列表
+            users.unshift(data.user);
+
+            for(var index in clients)
+            {
+                clients[index].emit('system',JSON.stringify({type:'online',msg:data.user,time:(new Date()).getTime()}));
+                clients[index].emit('userflush',JSON.stringify({users:users}));
+            }
+            client.emit('system',JSON.stringify({type:'in',msg:'',time:(new Date()).getTime()}));
+            client.emit('userflush',JSON.stringify({users:users}));
+        }
+        clients[data.user] = client;
+        client.emit('userflush',JSON.stringify({users:users}));
+    });
 
     client.on('message', function (msg) {
         console.log(msg);
+
         for(var index in clients)
         {
             clients[index].emit('message',msg);
@@ -31,6 +48,24 @@ io.sockets.on('connection', function (client){
     }) ;
 
     client.on('disconnect', function () {
+        setTimeout(userOffline,5000);
+        function userOffline()
+        {
+            for(var index in clients)
+            {
+                if(clients[index] == client)
+                {
+                    users.splice(users.indexOf(index),1);
+                    delete clients[index];
+                    for(var index_inline in clients)
+                    {
+                        clients[index_inline].emit('system',JSON.stringify({type:'offline',msg:index,time:(new Date()).getTime()}));
+                        clients[index_inline].emit('userflush',JSON.stringify({users:users}));
+                    }
+                    break;
+                }
+            }
+        }
     });
 
 });
@@ -44,6 +79,7 @@ app.configure(function(){
   app.set('view engine', 'ejs');
   app.use(express.bodyParser({uploadDir:'./public/tmp'}));
   app.use(express.methodOverride());
+  app.use(express.cookieParser());
   app.use(express.static(__dirname + '/public'));
   app.use(app.router);
 });
